@@ -17,7 +17,7 @@
             &nbsp;  
           <?php endif ?>
           
-          <?php if ($village->getMarket()): ?>
+          <?php if ($village->hasMarket()): ?>
             <span>
             <i class="fas fa-university"></i>
             </span>
@@ -28,7 +28,7 @@
     </header>
     <div class="card-content">
       <div class="content">
-        <?php if (count($village->villagers)): ?>
+        <?php if (count($village->getVillagers())): ?>
           <ul>
             <?php foreach ($village->getVillagers() as $villager): ?>
               <li><?php echo $villager->getSummary();?></li>
