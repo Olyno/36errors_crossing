@@ -13,7 +13,6 @@
       <div class="columns">
         <div class="column is-three-quarters">
           <article class="columns is-multiline">
-            <div>
             <?php if (count($villages) > 0): ?>
               <?php foreach ($villages as $village): ?>
                 <?php include("views/partials/village_card.html.php");?>
