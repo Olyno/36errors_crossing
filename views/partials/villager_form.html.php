@@ -1,13 +1,13 @@
 <article class="box">
   <h3 class="title">Créer un villageois</h3>
 
-  <?php if (count($villages) < 0): ?>
-  <form action="/villager/create" method="POST">
+  <?php if (count($villages) > 0): ?>
+  <form action="" method="POST">
     <input type="text" class="input is-fullwidth" name="name" placeholder="Nom du villageois"><br>
     <select type="text" class="input is-fullwidth" name="village_id" >
       <?php foreach($villages as $village):?>
         <option 
-            value="<?php $village->id;?>"
+            value="<?php echo $village->id;?>"
         ><?php echo $village->getName()?></option>
       <?php endforeach;?>
 
