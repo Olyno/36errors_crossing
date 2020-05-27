@@ -15,13 +15,8 @@ class Main extends General{
     $villageFactory = new VillageFactory($this->pdo);
     $villages = $villageFactory->get_all();
 
-
     $villagerFactory = new VillagerFactory($this->pdo);
     $villagers = $villagerFactory->get_all();
-
-    $villagerFactory = new VillagerFactory($this->pdo);
-    $villagers = $villagerFactory->get_all();
-
 
     foreach ($villages as $village) {
       foreach ($villagers as $villager) {
