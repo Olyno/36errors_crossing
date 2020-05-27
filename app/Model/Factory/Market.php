@@ -4,7 +4,7 @@ namespace Model\Factory;
 class Market extends AbstractFactory{
 
   public function get_all(){
-    $q = "SELECT  FROM market;";
+    $q = "SELECT * FROM market;";
     $stmt = $this->pdo->query($q);
     $markets = $stmt->fetchAll(\PDO::FETCH_CLASS, "\\Model\\Village");
 
