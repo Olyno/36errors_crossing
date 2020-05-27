@@ -10,7 +10,7 @@
   //on initialise la connexion à la bdd
   require_once("config/secret.php");
 
-  require_once("app/Library/Request.php");
+  use \Library\Request as Request;
 
   $pdo = new PDO('mysql:dbname='.$secret["db"]["dbname"].';host='.$secret["db"]["host"].";charset=utf8mb4", $secret["db"]["username"], $secret["db"]['password']);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
